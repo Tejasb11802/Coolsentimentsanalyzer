@@ -3,7 +3,7 @@ from textblob import TextBlob
 
 st.set_page_config(page_title="Customer Sentiment Explorer", layout="centered")
 
-st.title("🧠 Customer Sentiment Explorer")
+st.title("Customer Sentiment Explorer")
 st.write("Analyze the sentiment of your customer feedback, social media posts, or general text input.")
 
 # Input text box
@@ -22,10 +22,10 @@ if st.button("Analyze Sentiment"):
         st.write(f"**Subjectivity:** {subjectivity:.2f} (0 = Objective, 1 = Subjective)")
 
         if polarity > 0:
-            st.success("Overall Sentiment: Positive 😊")
+            st.success("Overall Sentiment: Positive")
         elif polarity < 0:
-            st.error("Overall Sentiment: Negative 😞")
+            st.error("Overall Sentiment: Negative")
         else:
-            st.info("Overall Sentiment: Neutral 😐")
+            st.info("Overall Sentiment: Neutral")
     else:
         st.warning("Please enter some text to analyze.")
